@@ -5,10 +5,10 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title ""
-Date ""
-Rev ""
-Comp ""
+Title "digiLED Connector Breakout Board"
+Date "2019-05-30"
+Rev "1.0"
+Comp "Russ Garrett"
 Comment1 ""
 Comment2 ""
 Comment3 ""
@@ -175,19 +175,19 @@ Wire Wire Line
 Wire Wire Line
 	2750 3150 2750 3200
 Connection ~ 2950 3150
-Text GLabel 2900 2150 0    50   Input ~ 0
+Text GLabel 2900 2150 0    50   Input ~ 6
 D2
-Text GLabel 2900 2250 0    50   Input ~ 0
+Text GLabel 2900 2250 0    50   Input ~ 6
 OE
-Text GLabel 2900 2350 0    50   Input ~ 0
+Text GLabel 2900 2350 0    50   Input ~ 6
 A0
-Text GLabel 2900 2450 0    50   Input ~ 0
+Text GLabel 2900 2450 0    50   Input ~ 6
 CLK
-Text GLabel 3500 2150 2    50   Input ~ 0
+Text GLabel 3500 2150 2    50   Input ~ 6
 D1
-Text GLabel 3500 2250 2    50   Input ~ 0
+Text GLabel 3500 2250 2    50   Input ~ 6
 LAT
-Text GLabel 3500 2350 2    50   Input ~ 0
+Text GLabel 3500 2350 2    50   Input ~ 6
 A1
 NoConn ~ 3350 2450
 Wire Wire Line
@@ -275,19 +275,19 @@ F 3 "" H 5750 2500 50  0001 C CNN
 	1    5750 2500
 	1    0    0    -1  
 $EndComp
-Text GLabel 6000 2500 2    50   Output ~ 0
+Text GLabel 6000 2500 2    50   Output ~ 6
 D1
-Text GLabel 6000 2600 2    50   Output ~ 0
+Text GLabel 6000 2600 2    50   Output ~ 6
 D2
-Text GLabel 6000 2800 2    50   Output ~ 0
+Text GLabel 6000 2800 2    50   Output ~ 6
 A1
-Text GLabel 6000 2700 2    50   Output ~ 0
+Text GLabel 6000 2700 2    50   Output ~ 6
 A0
-Text GLabel 6000 2900 2    50   Output ~ 0
+Text GLabel 6000 2900 2    50   Output ~ 6
 OE
-Text GLabel 6000 3000 2    50   Output ~ 0
+Text GLabel 6000 3000 2    50   Output ~ 6
 LAT
-Text GLabel 6000 3100 2    50   Output ~ 0
+Text GLabel 6000 3100 2    50   Output ~ 6
 CLK
 Wire Wire Line
 	5850 2500 6000 2500
