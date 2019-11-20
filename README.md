@@ -18,6 +18,8 @@ An appropriate receiver card is probably the MRV420/MRV300 which supports "64-gr
 
 As each LED screen panel uses 2 address lines and 2 data lines, we should probably be able to have two panels share the same pair of data lines, which equates to 64 panels per receiver card. The MRV300 card only supports 256x226 pixels though, which equates to 4x14 = 56 panels.
 
+*Status as of November 2019*: We now have an MRV420 receiver card, and I've managed to make it work - kind of. I can get test patterns to display, but not in colour. I need to contact Novastar and get some advice on how to configure the receiver card for these panels.
+
 # Proposed electrical setup
 ![Layout Diagram](/diagrams/diag.png)
 
