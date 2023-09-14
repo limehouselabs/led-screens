@@ -1,0 +1,13 @@
+baseURL = 'https://led-screens.limehouselabs.org/'
+languageCode = 'en-gb'
+title = 'LED Screens'
+enableGitInfo = true
+
+[params]
+BookSearch = false
+BookEditPath = 'master'
+BookCommitPath = 'commit'
+BookRepo = 'https://github.com/limehouselabs/led-screens'
+
+[markup.goldmark.renderer]
+unsafe = true
