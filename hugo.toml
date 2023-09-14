@@ -1,6 +1,7 @@
 baseURL = 'https://led-screens.limehouselabs.org/'
 languageCode = 'en-gb'
 title = 'LED Screens'
+theme = 'hugo-book'
 enableGitInfo = true
 
 [params]
