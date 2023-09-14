@@ -6,7 +6,7 @@ enableGitInfo = true
 
 [params]
 BookSearch = false
-BookEditPath = 'master'
+BookEditPath = 'tree/main'
 BookCommitPath = 'commit'
 BookRepo = 'https://github.com/limehouselabs/led-screens'
 
