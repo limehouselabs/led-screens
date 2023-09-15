@@ -52,6 +52,10 @@ There are three conventional 2x4 pin 2.54mm header connectors on the board. The 
 | D1 | LAT | A1 | NC |
 | D2 | OE  | A0 | CLK|
 
+`A0` and `A1` are the address lines which select a pair of rows. `D0` and `D1` are serial data lines which accept interleaved 16-byte BGR data.
+
+A KiCAD project for a simple breakout PCB which supplies power and data to all three connectors is [available here](https://github.com/limehouselabs/led-screens/tree/main/panel-connector).
+
 ## Using controller cards
 
 If you want to build a substantial screen out of these tiles, you should consider a [commercial controller](../../controllers).
