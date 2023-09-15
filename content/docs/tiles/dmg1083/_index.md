@@ -61,6 +61,8 @@ With the top and bottom rows likely to be just for the flash chip.
 
 The other pins for the panel itself look like 4x R G and B shift registers, with 5 bit address(?)
 
+The two sets of headers on left and right sides are connected pin for pin, so it shouldn't matter which one you plug into.
+
 ## Pictures
 
 {{< figure src="dmg1083_pcb.jpeg" >}}
