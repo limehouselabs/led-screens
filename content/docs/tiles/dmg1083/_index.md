@@ -27,7 +27,13 @@ likely that some will be available for distribution soon.
 The PCBs are mounted in a beautifully-manufactured aluminium frame which has magnets and alignment
 pins for mounting.
 
-The driver chips are Macroblock [MBI5153](/datasheets/MBI5153GP-A.pdf) 16-Channel PWM Constant Current LED Drivers. Unlike the previous generation of tiles, these drivers support 14-bit PWM dimming on-chip.
+- The driver chips are Macroblock [MBI5153](/datasheets/MBI5153GP-A.pdf) 16-Channel PWM Constant Current LED Drivers. Unlike the previous generation of tiles, these drivers support 14-bit PWM dimming on-chip.
+- There's also a bunch of logic chips:
+  - 74HC4051D 8-channel analog multiplexer/demultiplexer
+  - HC245 Octal bus tranceiver; 3-state
+  - HC123 Monostable multivibrator
+  - HC138 3-Line To 8-Line Decoders/Demultiplexers
+- And a line of 39(?) APM4953 dual mosfets. 
 
 The board also features a flash chip (neatly labelled in a box on the silkscreen) which seems likely to contain panel-specific calibration data. Maybe.
 
