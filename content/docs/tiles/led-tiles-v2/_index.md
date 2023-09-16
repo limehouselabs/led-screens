@@ -74,7 +74,7 @@ The receiver card originally recommended was the Novastar MRV336 (note: not MRV3
 
 An appropriate receiver card is probably the MRV420/MRV300 which supports "64-group serial data mode". This is broken down into groups of channels which have 4 address lines (A, B, C, D), 16/32 data lines, as well as OE, LAT, and CLK outputs. 
 
-[Russ](https://chaos.social/@russsss) at Limehouse Labs has tried to get this working but ran into some issues with colour. If you're interested in trying this approach please get in touch -- we have the Novastar gear at Limehouse.
+[Russ](https://chaos.social/@russss) at Limehouse Labs has tried to get this working but ran into some issues with colour. If you're interested in trying this approach please get in touch -- we have the Novastar gear at Limehouse.
 
 ## Links
 
