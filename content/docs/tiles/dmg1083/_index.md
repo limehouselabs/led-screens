@@ -7,7 +7,7 @@ title: DMG1083
 <tr><th>Manufacturer</th><td>digiLED</td></tr>
 <tr><th>Model</th><td>DMG1083</td></tr>
 <tr><th>Size</th><td>250×250 mm</td></tr>
-<tr><th>Resolution</th><td>78×78 px (TBC)</td></tr>
+<tr><th>Resolution</th><td>78×78 px</td></tr>
 <tr><th>Colour depth</th><td>14-bit</td></tr>
 <tr><th>Pixel pitch</th><td>~3 mm (TBC)</td></tr>
 </table>
@@ -27,41 +27,46 @@ likely that some will be available for distribution soon.
 The PCBs are mounted in a beautifully-manufactured aluminium frame which has magnets and alignment
 pins for mounting.
 
-- The driver chips are Macroblock [MBI5153](/datasheets/MBI5153GP-A.pdf) 16-Channel PWM Constant Current LED Drivers. Unlike the previous generation of tiles, these drivers support 14-bit PWM dimming on-chip.
-- There's also a bunch of logic chips:
+- The driver chips are Macroblock [MBI5153](/datasheets/MBI5153GP-A.pdf) 16-Channel PWM Constant Current LED Drivers. There are 20 of these for each colour. Unlike the previous generation of tiles, these drivers support 14-bit PWM dimming on-chip.
+- The address decoder is a 74HC138 (presumably 2 of them).
+- There's also a bunch of other chips:
   - 74HC4051D 8-channel analog multiplexer/demultiplexer
-  - HC245 Octal bus tranceiver; 3-state
+  - HC245 Octal bus transceiver; 3-state
   - HC123 Monostable multivibrator
-  - HC138 3-Line To 8-Line Decoders/Demultiplexers
-- And a line of 39(?) APM4953 dual mosfets. 
+  - And a line of 39(?) APM4953 dual MOSFETs. 
+
+It seems to be best to consider this as an 80x80 px display with 2 missing columns/rows. The 20 driver chips are capable of driving 320 pixels at a time, which means 6400/320 = 1/20th of the screen is driven at once.
 
 The board also features a flash chip (neatly labelled in a box on the silkscreen) which seems likely to contain panel-specific calibration data. Maybe.
 
 ## Interface
-The pins are labelled:
-|  |  |
-|-----|--------|
-| CS | SLK |
-| A |  B |
-| OE | LAT |
-| CLK | NC |
-| C | D |
-| E | R1 |
-| G1 | B1 |
-| GND | R2 |
-| G2 | B2 |
-| R3 | G3 |
-| B3 | GND |
-| R4 | G4 |
-| B4 | NC |
-| SR | NC |
-| MSI | MSO |
+<table class="pinout">
+  <caption>Data connector pinout</caption>
+  <tr><td class="misc">CS</td><td class="misc">SLK</td></tr>
+  <tr><td class="address">A</td><td class="address">B</td></tr>
+  <tr><td class="control not">OE</td><td class="control">LAT</td></tr>
+  <tr><td class="control">CLK</td><td class="nc">NC</td></tr>
+  <tr><td class="address">C</td><td class="address">D</td></tr>
+  <tr><td class="address">E</td><td class="red">R1</td></tr>
+  <tr><td class="green">G1</td><td class="blue">B1</td></tr>
+  <tr><td class="gnd">GND</td><td class="red">R2</td></tr>
+  <tr><td class="green">G2</td><td class="blue">B2</td></tr>
+  <tr><td class="red">R3</td><td class="green">G3</td></tr>
+  <tr><td class="blue">B3</td><td class="gnd">GND</td></tr>
+  <tr><td class="red">R4</td><td class="green">G4</td></tr>
+  <tr><td class="blue">B4</td><td class="nc">NC</td></tr>
+  <tr><td class="misc">SR</td><td class="nc">NC</td></tr>
+  <tr><td class="misc">MSI</td><td class="misc">MSO</td></tr>
+</table>
 
-With the top and bottom rows likely to be just for the flash chip.
+The `CS`, `SLK`, `MSI`, `MSO` and `SR` lines are likely related to the flash chip and are not required to drive the display.
 
-The other pins for the panel itself look like 4x R G and B shift registers, with 5 bit address(?)
+The remainder of the pins appear to be a standard "HUB320" interface:
+* `A`, `B`, `C`, `D`, `E` are address lines.
+* `R1`, `B1`, `G1`, etc are the pixel data lines (which are connected to the input of the MBI5153 shift register drivers).
+* `CLK`, `LAT` and `OE` are the standard control lines.
 
-The two sets of headers on left and right sides are connected pin for pin, so it shouldn't matter which one you plug into.
+The two data connectors on the left and right sides are directly connected and the pinouts are identical. (This is convenient for debugging.)
 
 ## Pictures
 

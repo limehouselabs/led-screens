@@ -18,4 +18,4 @@ Please note it may take a while for us to reply.
 
 ## Available items
 
-* ["v2" LED tiles](../tiles/led-tiles-v2) - approximately 200 available
+* ["v2" LED tiles](../tiles/led-tiles-v2) - approximately 200 available as of 2023-09-16
