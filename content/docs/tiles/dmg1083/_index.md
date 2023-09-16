@@ -48,14 +48,14 @@ The board also features a flash chip (neatly labelled in a box on the silkscreen
   <tr><td class="control not">OE</td><td class="control">LAT</td></tr>
   <tr><td class="control">CLK</td><td class="nc">NC</td></tr>
   <tr><td class="address">C</td><td class="address">D</td></tr>
-  <tr><td class="address">E</td><td class="red">R1</td></tr>
-  <tr><td class="green">G1</td><td class="blue">B1</td></tr>
-  <tr><td class="gnd">GND</td><td class="red">R2</td></tr>
-  <tr><td class="green">G2</td><td class="blue">B2</td></tr>
-  <tr><td class="red">R3</td><td class="green">G3</td></tr>
-  <tr><td class="blue">B3</td><td class="gnd">GND</td></tr>
-  <tr><td class="red">R4</td><td class="green">G4</td></tr>
-  <tr><td class="blue">B4</td><td class="nc">NC</td></tr>
+  <tr><td class="address">E</td><td class="data">R1</td></tr>
+  <tr><td class="data">G1</td><td class="data">B1</td></tr>
+  <tr><td class="gnd">GND</td><td class="data">R2</td></tr>
+  <tr><td class="data">G2</td><td class="data">B2</td></tr>
+  <tr><td class="data">R3</td><td class="data">G3</td></tr>
+  <tr><td class="data">B3</td><td class="gnd">GND</td></tr>
+  <tr><td class="data">R4</td><td class="data">G4</td></tr>
+  <tr><td class="data">B4</td><td class="nc">NC</td></tr>
   <tr><td class="misc">SR</td><td class="nc">NC</td></tr>
   <tr><td class="misc">MSI</td><td class="misc">MSO</td></tr>
 </table>
