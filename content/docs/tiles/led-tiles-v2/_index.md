@@ -47,10 +47,20 @@ There are three conventional 2x4 pin 2.54mm header connectors on the board. The 
 
 **Note that there is no polarity protection.** If you reverse 5V and GND you will fry the board.
 
-|    |     |    |    |
-|----|-----|----|----|
-| D1 | LAT | A1 | NC |
-| D2 | OE  | A0 | CLK|
+<table class="pinout">
+    <tr>
+        <td class="data">D1</td>
+        <td class="control">LAT</td>
+        <td class="address">A1</td>
+        <td class="nc">NC</td>
+    </tr>
+    <tr>
+        <td class="data">D2</td>
+        <td class="control">OE</td>
+        <td class="address">A0</td>
+        <td class="control">CLK</td>
+    </tr>
+</table>
 
 `A0` and `A1` are the address lines which select a pair of rows. `D0` and `D1` are serial data lines which accept interleaved 16-byte BGR data.
 

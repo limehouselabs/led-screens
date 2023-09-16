@@ -6,6 +6,67 @@ div.warning {
     border-left: 1px solid #eed3d7;
 }
 
-table.vertical th {
-    text-align: right;
+.markdown {
+    table.vertical th {
+        text-align: right;
+    }
+
+    table.pinout {
+        padding-left: 20px;
+        padding-right: 20px;
+
+        td {
+            text-align: center;
+            padding: 3px;
+            background-color: #fefefe;
+            border: 1px solid #555;
+            min-width: 2.5em;
+        }
+
+        td.gnd {
+            background-color: #111;
+            color: #fff;
+        }
+
+        td.address {
+            background-color: #a403b6;
+            color: #fff;
+        }
+
+        td.control {
+            background-color: #cf841b;
+            color: #fff;
+        }
+
+        td.data {
+            background-color: #0e848a;
+            color: #fff;
+        }
+
+        td.red {
+            background-color: rgb(160, 17, 17);
+            color: #fff;
+        }
+
+        td.green {
+            background-color: rgb(25, 181, 25);
+            color: #fff;
+        }
+
+        td.blue {
+            background-color: rgb(13, 13, 170);
+            color: #fff;
+        }
+
+        td.nc {
+            background-color: #ddd;
+            color: #666;
+        }
+
+        td.not {
+            text-decoration: overline;
+        }
+
+    }
+
 }
