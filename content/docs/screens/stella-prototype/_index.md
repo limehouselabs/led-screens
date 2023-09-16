@@ -5,9 +5,12 @@ title: Stella Prototype
 
 <table class="vertical">
 <tr><th>Manufacturer</th><td>digiLED</td></tr>
+<tr><th>Model</th><td>STELLA-L8250iR</td></tr>
 <tr><th>Pixel pitch</th><td>6 mm</td></tr>
 <tr><th>Number of modules</th><td>18</td></tr>
+<tr><th>Module size</th><td>500×500×82 mm</td></tr>
 <tr><th>Module resolution</th><td>80×80 px</td></tr>
+<tr><th>Module weight</th><td>9 kg</td></tr>
 <tr><th>Module power</th><td>250 W</td></tr>
 <tr><th>Receiver cards</th><td>Novastar MRV500</td></tr>
 </table>
@@ -20,4 +23,8 @@ Total power consumption is in the region of 4.5 kW at full brightness so it can 
 
 This screen is stored at Limehouse Labs and is working with our Novastar sender.
 
-It lives in 3 small flight cases, approximately 50 kg each. Needs at least a small van to move.
+It lives in 3 small flight cases, approximately 70 kg each. Needs at least a small van to move.
+
+## Photos
+
+{{< figure src="panel_label.jpg">}}
