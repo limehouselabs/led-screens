@@ -11,6 +11,7 @@ I had a go at driving this with the Novastar MCTRL300/MRV300. Limited success wa
 * It mostly works when NovaLCT is configured for 24-group hub mode, except now the `E` address line is getting data instead of address, which results in mostly-blank sections of the screen with ghosting. (Verified with logic analyser. Disconnecting `E` removes the ghosting.)
 * The software was generating a configuration with 1:10 scan rate, when I think this should be 1:20 -- 6400 pixels total divided by 320 column drivers (20 chips with 16 channels each).
 * NovaLCT reports a different model of receiver card for some reason -- maybe this is an issue?
+* Occasionally the screen fades out in a rather pleasing way when driven brightly. I suspect/hope this is due to voltage drop and I need to construct some better power cables.
 
 It's possible there is some receiver card incompatibility here. I've ordered an MRV432 to see if I have more luck with that one. At least we know the screen works in principle.
 
