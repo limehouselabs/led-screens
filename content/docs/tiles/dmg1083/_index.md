@@ -1,5 +1,6 @@
 ---
 title: DMG1083
+bookCollapseSection: true
 ---
 # DMG1083 LED Tiles
 
