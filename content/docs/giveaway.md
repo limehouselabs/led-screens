@@ -18,4 +18,5 @@ Please note it may take a while for us to reply.
 
 ## Available items
 
-* ["v2" LED tiles](../tiles/led-tiles-v2) - approximately 200 available as of 2023-09-16
+<!-- * ["v2" LED tiles](../tiles/led-tiles-v2) - approximately 200 available as of 2023-09-16 -->
+Nothing currently on offer. We might have some more ["v2" LED tiles](../tiles/led-tiles-v2) soon.
