@@ -39,7 +39,7 @@ pins for mounting.
 
 It seems to be best to consider this as an 80x80 px display with 2 missing columns/rows. The 20 driver chips are capable of driving 320 pixels at a time, which means 6400/320 = 1/20th of the screen is driven at once.
 
-The board also features a flash chip (neatly labelled in a box on the silkscreen) which seems likely to contain panel-specific calibration data. Maybe.
+The board also features a flash chip (neatly labelled in a box on the silkscreen) which seems likely to contain panel-specific calibration data. The Novastar Armor series of receiving cards support reading this calibration data, but the standard MRV series don't.
 
 ## Interface
 <table class="pinout">
@@ -61,14 +61,28 @@ The board also features a flash chip (neatly labelled in a box on the silkscreen
   <tr><td class="misc">MSI</td><td class="misc">MSO</td></tr>
 </table>
 
-The `CS`, `SLK`, `MSI`, `MSO` and `SR` lines are likely related to the flash chip and are not required to drive the display.
+The `CS`, `SLK`, `MSI`, `MSO` and `SR` lines are likely related to the calibration flash and are not required to drive the display.
 
-The remainder of the pins appear to be a standard "HUB320" interface:
+The remainder of the pins _appear_ to be a standard "HUB320" interface:
 * `A`, `B`, `C`, `D`, `E` are address lines.
 * `R1`, `B1`, `G1`, etc are the pixel data lines (which are connected to the input of the MBI5153 shift register drivers).
-* `CLK`, `LAT` and `OE` are the standard control lines.
+* `CLK`, `LAT` and `OE` are the standard control lines, but as discussed below, the behaviour is anything but standard. They correspond to the `DCLK`, `LE`, and `GCLK` pins on the MBI5153.
 
-The two data connectors on the left and right sides are directly connected and the pinouts are identical. (This is convenient for debugging.)
+The two data connectors on the left and right sides are directly connected and the pinouts are identical. (This is convenient for connecting a logic analyser.)
+
+## Driving
+
+Don't be deceived: while the interface on this panel looks superficially similar to smaller LED matrix panels, this hides the significant complexity of the MBI5153 driver chip. You'll need to refer extensively to the MBI5153 [datasheet](/datasheets/MBI5153GP-A.pdf) and [application note](/datasheets/MBI5051-52-53-AN.pdf) (this one is not quite the right model but it appears identical).
+
+The `OE` line on the connector actually feeds the `GCLK` input on the MBI5153, and this provides both blanking and the PWM reference clock for the drivers.
+
+The `LAT` line on the connector feeds the `LE` input on the MBI5153. This not only handles latching-in the pixel data, but also sending other commands to the MBI5153, depending on the width of the pulse.
+
+Significantly, a whole frame's worth of pixels is clocked into this panel at once, and held in a SRAM double-buffer on the MBI5153 chips. Once this is complete, the output is blanked and a `VSYNC` command is sent to the MBI5153, which switches the buffers over. The previous frame is displayed while the next frame's data is being clocked in.
+
+Since there are 20 "scan lines" (320 pixels each) on this screen, this means that the driver chip must switch the scan line it's displaying at the same time as the controller switches the scan line address. The MBI5153 does this on the 1024th rising edge of the `GCLK`, so the least significant address line must be clocked at 1/1024th the frequency of the `GCLK`.
+
+The MBI5153 has the number of scan lines configured in its configuration registers (among other things). Note that there are 5 address lines but the number of scan lines is 20 so the address lines need to roll over at 0x14.
 
 ## Pictures
 
