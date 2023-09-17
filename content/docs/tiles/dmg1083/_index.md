@@ -11,6 +11,7 @@ bookCollapseSection: true
 <tr><th>Resolution</th><td>78×78 px</td></tr>
 <tr><th>Colour depth</th><td>14-bit</td></tr>
 <tr><th>Pixel pitch</th><td>~3 mm (TBC)</td></tr>
+<tr><th>Supply voltage</th><td>5 V</td></tr>
 </table>
 
 {{< support_warning >}}
