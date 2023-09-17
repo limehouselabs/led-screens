@@ -68,6 +68,8 @@ The remainder of the pins _appear_ to be a standard "HUB320" interface:
 * `R1`, `B1`, `G1`, etc are the pixel data lines (which are connected to the input of the MBI5153 shift register drivers).
 * `CLK`, `LAT` and `OE` are the standard control lines, but as discussed below, the behaviour is anything but standard. They correspond to the `DCLK`, `LE`, and `GCLK` pins on the MBI5153.
 
+Note that the "high" level on the MBI5153 is defined as 0.7V<sub>DD</sub>, and V<sub>DD</sub> is 5V, so driving these pins off a 3.3V microcontroller may not work. 
+
 The two data connectors on the left and right sides are directly connected and the pinouts are identical. (This is convenient for connecting a logic analyser.)
 
 ## Driving
