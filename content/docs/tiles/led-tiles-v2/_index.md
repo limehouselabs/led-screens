@@ -49,6 +49,21 @@ There are three conventional 2x4 pin 2.54mm header connectors on the board. The 
 
 <table class="pinout">
     <tr>
+        <td class="vcc">5V</td>
+        <td class="vcc">5V</td>
+        <td class="vcc">5V</td>
+        <td class="vcc">5V</td>
+    </tr>
+    <tr>
+        <td class="vcc">5V</td>
+        <td class="vcc">5V</td>
+        <td class="vcc">5V</td>
+        <td class="vcc">5V</td>
+    </tr>
+</table>
+
+<table class="pinout">
+    <tr>
         <td class="data">D1</td>
         <td class="control">LAT</td>
         <td class="address">A1</td>
@@ -59,6 +74,21 @@ There are three conventional 2x4 pin 2.54mm header connectors on the board. The 
         <td class="control">OE</td>
         <td class="address">A0</td>
         <td class="control">CLK</td>
+    </tr>
+</table>
+
+<table class="pinout">
+    <tr>
+        <td class="gnd">GND</td>
+        <td class="gnd">GND</td>
+        <td class="gnd">GND</td>
+        <td class="gnd">GND</td>
+    </tr>
+    <tr>
+        <td class="gnd">GND</td>
+        <td class="gnd">GND</td>
+        <td class="gnd">GND</td>
+        <td class="gnd">GND</td>
     </tr>
 </table>
 
