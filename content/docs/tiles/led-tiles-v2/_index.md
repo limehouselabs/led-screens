@@ -76,8 +76,13 @@ An appropriate receiver card is probably the MRV420/MRV300 which supports "64-gr
 
 [Russ](https://chaos.social/@russsss) at Limehouse Labs has tried to get this working but ran into some issues with colour. If you're interested in trying this approach please get in touch -- we have the Novastar gear at Limehouse.
 
+## Example code
+
+* [Arduino code](https://github.com/JonRussell00/LEDpanels) for 4 panels from Jon Russell
+* [Micropython driver](https://github.com/hackhitchin/ledpanel-python-sample)
+
 ## Links
 
 * [London Hackspace wiki page](https://wiki.london.hackspace.org.uk/view/LED_tiles_V2), where some of this info is sourced from
-* [Arduino code](https://github.com/JonRussell00/LEDpanels) for 4 panels from Jon Russell
 * [More photos and datasheets](https://github.com/krux702/led_panel_wall) from SYN Shop
+* [Hitchin Hackspace wiki page](https://wiki.hackhitchin.org.uk/index.php?title=LED_Display_Panel_Driving)
