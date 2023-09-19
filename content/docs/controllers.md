@@ -12,7 +12,7 @@ They consist of a "sender" which accepts video (normally in DVI format), and con
 
 An entry-level sender (generally good for up to 1.3 megapixels) is $100-150 and a receiver card is $15-40. [led-card.com](https://www.led-card.com) is a good place to buy them from.
 
-Receiver cards are so cheap, with a powerful FPGA, dual Ethernet, and plentiful I/O breakouts, that they're used by some hobbyists as FPGA devboards.
+(Receiver cards are so cheap, with a powerful FPGA, dual Ethernet, and plentiful I/O breakouts, that they're [used by some hobbyists as FPGA devboards](https://github.com/q3k/chubby75).)
 
 ## Receiver card selection
 
