@@ -74,6 +74,18 @@ It seems to be best to consider this as an 80x80 px display with 2 missing colum
 The board also features a flash chip (neatly labelled in a box on the silkscreen) which seems likely to contain panel-specific calibration data. The Novastar Armor series of receiving cards support reading this calibration data, but the standard MRV series don't.
 
 ## Interface
+
+Power is provided on a 4-pin JST VH connector:
+
+<table class="pinout">
+  <tr><td class="vcc">5V</td></tr>
+  <tr><td class="vcc">5V</td></tr>
+  <tr><td class="gnd">GND</td></tr>
+  <tr><td class="gnd">GND</td></tr>
+</table>
+
+Data is on a 2x15 connector:
+
 <table class="pinout">
   <caption>Data connector pinout</caption>
   <tr><td class="misc">CS</td><td class="misc">SLK</td></tr>
