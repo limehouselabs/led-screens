@@ -74,7 +74,7 @@ Data is on a 2x15 connector:
 
 The `CS`, `SLK`, `MSI`, and `MSO` lines are likely related to the MOM flash and are not required to drive the display.
 
-The `SR` line is currently a mystery.
+The `SR` line is currently a mystery. The panel appears to work with it disconnected. (Untested hypothesis: could this connect the data lines to the output of the shift register chains to allow the feedback data from the LED drivers to be read back? Perhaps this is what the `74HC4051D` ICs are doing.)
 
 The remainder of the pins _appear_ to be a standard "HUB320" interface:
 * `A`, `B`, `C`, `D`, `E` are address lines.
