@@ -27,14 +27,14 @@ likely that some will be available for distribution soon.
 
 ## Description
 
-These tiles are originally from a [digiLED IMAG-R 3200](../../../datasheets/digiLED_iMAG-R_Series.pdf) screen. They were driven with a Novastar system using the MRV270 receiver card, with each receiver driving a module comprising a 2x2 array of tiles.
+These tiles are originally from a [digiLED IMAG-R 3200](../../../datasheets/digiLED_iMAG-R_Series.pdf) screen. They were driven with a Novastar system using the MRV270/MRV470 receiver card, with each receiver driving a module comprising a 2x2 array of tiles.
 
 It appears these LED tiles are similar or identical to models DMG1085 and DMG1075 (perhaps the only difference is the specific model of LEDs).
 
 The PCBs are mounted in a beautifully-manufactured aluminium frame which has magnets and alignment
 pins for mounting.
 
-It seems to be best to consider this as an 80x80 px display with 2 missing columns/rows. The 20 driver chips are capable of driving 320 pixels at a time, which means 6400/320 = 1/20th of the screen is driven at once.
+Electronically, this as an 80x80 px display with 2 missing columns/rows. The 20 driver chips are capable of driving 320 pixels (4 rows) at a time, which means 6400/320 = 1/20th of the screen is driven at once.
 
 The board also features a MOM (memory-on-module) flash chip (neatly labelled in a box on the silkscreen) which seems likely to contain panel-specific calibration data.
 
@@ -89,7 +89,7 @@ The two data connectors on the left and right sides are directly connected and t
 
 <div class="warning">We're yet to drive these panels with custom code, so this is all partially speculative!</div>
 
-Don't be deceived: while the interface on this panel looks superficially similar to smaller LED matrix panels, this hides the significant complexity of the MBI5153 driver chip. You'll need to refer extensively to the MBI5153 [datasheet](/datasheets/MBI5153GP-A.pdf) and [application note](/datasheets/MBI5051-52-53-AN.pdf) (this one is not quite the right model but it appears identical).
+Don't be deceived: while the interface on this panel looks superficially similar to smaller LED matrix panels, this hides the significant complexity of the MBI5153 driver chip. You'll need to refer extensively to the MBI5153 [datasheet](/datasheets/MBI5153-VA.01-EN.pdf) and [application note](/datasheets/MBI5153%20Application%20Note%20V1.02-EN.pdf).
 
 The `CLK` line on the connector feeds `DCLK` on the MBI5153s.
 
