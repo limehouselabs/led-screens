@@ -99,7 +99,7 @@ The `LAT` line on the connector feeds the `LE` input on the MBI5153. This not on
 
 Significantly, a whole frame's worth of pixels is clocked into this panel at once, and held in a SRAM double-buffer on the MBI5153 chips. Once this is complete, the output is blanked and a `VSYNC` command is sent to the MBI5153, which switches the buffers over. The previous frame is displayed while the next frame's data is being clocked in.
 
-Since there are 20 "scan lines" (320 pixels each) on this screen, this means that the driver chip must switch the scan line it's displaying at the same time as the controller switches the scan line address. The MBI5153 does this on the 1024th rising edge of the `GCLK`, so the least significant address line must be clocked at 1/1024th the frequency of the `GCLK`.
+Since there are 20 "scan lines" (320 pixels each) on this screen, this means that the driver chip must switch the scan line it's displaying at the same time as the controller switches the scan line address. The MBI5153 does this on the 512th rising edge of the `GCLK`, so the least significant address line must be clocked at 1/512th the frequency of the `GCLK`.
 
 The MBI5153 has the number of scan lines configured in its configuration registers (among other things). Note that there are 5 address lines but the number of scan lines is 20 so the address lines need to roll over at 0x14.
 
