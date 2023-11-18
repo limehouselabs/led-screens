@@ -78,16 +78,14 @@ The `SR` line is currently a mystery. The panel appears to work with it disconne
 
 The remainder of the pins _appear_ to be a standard "HUB320" interface:
 * `A`, `B`, `C`, `D`, `E` are address lines.
-* `R1`, `B1`, `G1`, etc are the pixel data lines (which are connected to the input of the MBI5153 shift register drivers).
+* `R1..4`, `B1..4`, `G1..4` are the pixel data lines (which are connected to the input of the MBI5153 shift register drivers).
 * `CLK`, `LAT` and `OE` are the standard control lines, but as discussed below, the behaviour is anything but standard. They correspond to the `DCLK`, `LE`, and `GCLK` pins on the MBI5153.
 
-Data lines are buffered with 74HC245 bus transceivers. These may not be drivable with 3.3V logic. The original driver cards are 5V.
+Data line inputs are buffered with `74HC245` bus transceivers. These must be driven with 5V logic levels -- 3.3V is not sufficient. The Novastar cards use the `74HCT245` as an output buffer to level-shift 3.3V to 5V. If you use a different level-shifter you should verify that it has a fast enough rise time to handle the required frequency.
 
 The two data connectors on the left and right sides are directly connected and the pinouts are identical. (This is convenient for connecting a logic analyser.)
 
 ## Driving
-
-<div class="warning">We're yet to drive these panels with custom code, so this is all partially speculative!</div>
 
 Don't be deceived: while the interface on this panel looks superficially similar to smaller LED matrix panels, this hides the significant complexity of the MBI5153 driver chip. You'll need to refer extensively to the MBI5153 [datasheet](/datasheets/MBI5153-VA.01-EN.pdf) and [application note](/datasheets/MBI5153%20Application%20Note%20V1.02-EN.pdf).
 
@@ -97,13 +95,15 @@ The `OE` line on the connector actually feeds the `GCLK` input on the MBI5153s, 
 
 The `LAT` line on the connector feeds the `LE` input on the MBI5153. This not only handles latching-in the pixel data, but also sending other commands to the MBI5153, depending on how many `DCLK` pulses are sent while `LAT` is asserted.
 
-Significantly, a whole frame's worth of pixels is clocked into this panel at once, and held in a SRAM double-buffer on the MBI5153 chips. Once this is complete, the output is blanked and a `VSYNC` command is sent to the MBI5153, which switches the buffers over. The previous frame is displayed while the next frame's data is being clocked in.
+A whole frame's worth of pixels is clocked into this panel at once, and held in a SRAM double-buffer on the MBI5153 chips. Once this is complete, the output is blanked and a `VSYNC` command is sent to the MBI5153, which switches the buffers over. The previous frame is displayed while the next frame's data is being clocked in.
 
-Since there are 20 "scan lines" (320 pixels each) on this screen, this means that the driver chip must switch the scan line it's displaying at the same time as the controller switches the scan line address. The MBI5153 does this on the 512th rising edge of the `GCLK`, so the least significant address line must be clocked at 1/512th the frequency of the `GCLK`.
+Since there are 20 "scan lines" (320 pixels each) on this screen, this means that the driver chip must switch the scan line data it's outputting at the same time as the controller switches the scan line address. The MBI5153 does this on the 512th rising edge of the `GCLK`, so the least significant address line must be clocked at 1/512th the frequency of the `GCLK` (or 1/256th if the "`GCLK` multiplier" feature is used).
 
-The MBI5153 has the number of scan lines configured in its configuration registers (among other things). Note that there are 5 address lines but the number of scan lines is 20 so the address lines need to roll over at 0x14.
+The MBI5153 has the number of scan lines configured in its configuration registers (among other things). This configuration must be written to the panel before any data is sent. Note that there are 5 address lines but the number of scan lines is 20 so the address lines need to roll over at 0x14.
 
-It's currently not certain whether the configuration registers are nonvolatile - it's possible that the drivers need to be configured at every power up. According to the datasheet, the scanlines setting defaults to `4`.
+## Example code
+
+* eta has some [working code](https://git.eta.st/eta/led-panel-zone) to drive these panels in Rust using PIO on the Raspberry Pi Pico.
 
 ## Pictures
 
