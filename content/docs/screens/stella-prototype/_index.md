@@ -23,7 +23,7 @@ Total power consumption is in the region of 4.5 kW at full brightness so it can 
 
 This screen is stored at Limehouse Labs and is working with our Novastar sender.
 
-It lives in 3 small flight cases, approximately 70 kg each. Needs at least a small van to move.
+It lives in 3 small flight cases (940x600x750mm, ~70 kg each). Needs at least a small van to move.
 
 ## Photos
 
