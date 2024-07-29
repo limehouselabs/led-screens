@@ -104,7 +104,7 @@ The MBI5153 has the number of scan lines configured in its configuration registe
 ## Example code
 
 * eta has some [working code](https://git.eta.st/eta/led-panel-zone) to drive these panels in Rust using PIO on the Raspberry Pi Pico.
-* [mrfaptastic's code for the ESP32S3](https://github.com/mrfaptastic/ESP32S3-MBI5153-DMG1075-DMA)
+* [MrCodetastics's implementation](https://github.com/mrcodetastic/MBI5153-DMG1075-MatrixPanel-DMA) to drive these panels using an ESP32-S2 or ESP32-S3's DMA engine.
 
 ## Pictures
 
