@@ -116,3 +116,4 @@ An appropriate receiver card is probably the MRV420/MRV300 which supports "64-gr
 * [London Hackspace wiki page](https://wiki.london.hackspace.org.uk/view/LED_tiles_V2), where some of this info is sourced from
 * [More photos and datasheets](https://github.com/krux702/led_panel_wall) from SYN Shop
 * [Hitchin Hackspace wiki page](https://wiki.hackhitchin.org.uk/index.php?title=LED_Display_Panel_Driving)
+* [Hitchin Hackspace made a massive gameboy out of them](https://techhub.social/@hackhitchin/113097663088555473)
