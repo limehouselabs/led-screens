@@ -21,9 +21,11 @@ This is a one-off prototype made to evaluate a manufacturer for the digiLED "Ste
 
 Total power consumption is in the region of 4.5 kW at full brightness so it can be powered from 2x 13A sockets.
 
-This screen is stored at Limehouse Labs and is working with our Novastar sender.
+This screen is stored at Limehouse Labs and is working with a Novastar sender.
 
 It lives in 3 small flight cases (940x600x750mm, ~70 kg each). Needs at least a small van to move.
+
+This screen is available to borrow for non-profit causes, but you will have to collect and return it. Please [drop us an email](mailto:ledscreens@limehouselabs.org) if you're interested.
 
 ## Photos
 
