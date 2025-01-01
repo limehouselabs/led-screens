@@ -19,11 +19,9 @@ bookCollapseSection: true
 
 ## History
 
-These are video wall tiles which were donated in September 2023. They were part of a batch of tiles
-which had to be recalled due to an unacceptable failure rate.
+These are video wall tiles which were donated in September 2023. They were part of a batch of tiles which had to be recalled due to an unacceptable failure rate, though we haven't seen any indication of these failures in testing (it may simply be an issue with colour consistency).
 
-Approximately 800 tiles were received in this batch. We are currently evaluating these tiles and it is
-likely that some will be available for distribution soon.
+Approximately 800 tiles were received in this batch. We distributed a significant portion of them via the swapshop at [EMF 2024](https://www.emfcamp.org).
 
 ## Description
 
@@ -104,7 +102,7 @@ The MBI5153 has the number of scan lines configured in its configuration registe
 ## Example code
 
 * eta has some [working code](https://git.eta.st/eta/led-panel-zone) to drive these panels in Rust using PIO on the Raspberry Pi Pico and [gave a talk](https://media.ccc.de/v/emf2024-199-driving-fancy-led-panels-with-commodity-hardware) about this at EMF 2024.
-* [mrcodetastic's code for the ESP32S3](https://github.com/mrfaptastic/ESP32S3-MBI5153-DMG1075-DMA)
+* [mrcodetastic's code for the ESP32S3](https://github.com/mrcodetastic/ESP32S3-MBI5153-DMG1075-DMA)
 
 
 ## Pictures

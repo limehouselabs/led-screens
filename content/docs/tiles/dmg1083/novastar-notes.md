@@ -1,4 +1,6 @@
-# Driving the DMG1093 with the Novastar controller
+# Driving the DMG1083 with a Novastar controller
+
+We have what appears to be a [custom FPGA bitstream](./mrv270-bitstream.rar) for the MRV270 - this may have something to do with handling the missing rows/columns. We also have a Novastar [rcfg file](./DMG1075_100xiMAG-R_3200.rcfg) which was originally used for these screens (this will likely configure 4 tiles per receiver card). Neither of these have been tested.
 
 ## 2023-09-15
 
