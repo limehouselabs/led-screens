@@ -25,6 +25,8 @@ It uses a DBStar controller system, which is not the easiest to work with.
 ## Playing stuff
 This is the screen order we got working on 2024-12-31
 
+|     |     |     |
+|-----|-----|-----|
 | 1-1 | 1-2 | 5-1 |
 | 2-1 | 2-2 | 6-1 |
 | 3-1 | 3-2 | 7-1 |
