@@ -14,10 +14,10 @@ It uses a DBStar controller system, which is not the easiest to work with.
 
 ## Photos
 
-{{< figure src="led_floor.jpg">}}
-{{< figure src="tile_rear_case.jpeg">}}
-{{< figure src="tile_connections.jpeg">}}
-{{< figure src="tile_internals1.jpeg">}}
-{{< figure src="tile_internals2.jpeg">}}
-{{< figure src="tile_internals3.jpeg">}}
-{{< figure src="tile_driver.jpeg">}}
+{{< figure src="./images/led_floor.jpg">}}
+{{< figure src="./images/tile_rear_case.jpeg">}}
+{{< figure src="./images/tile_connections.jpeg">}}
+{{< figure src="./images/tile_internals1.jpeg">}}
+{{< figure src="./images/tile_internals2.jpeg">}}
+{{< figure src="./images/tile_internals3.jpeg">}}
+{{< figure src="./images/tile_driver.jpeg">}}
