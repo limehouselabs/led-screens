@@ -3,7 +3,7 @@ title: LED Floor
 ---
 # LED Floor
 
-This is a small LED floor, with 15 panels.
+This is a small LED floor, with 16 panels.
 
 * Square tiles with 48x48 LEDs, made from 4 24x24 subpanels
 * Shows up as 1600x1200 on the computer, top left portion goes to the screen
