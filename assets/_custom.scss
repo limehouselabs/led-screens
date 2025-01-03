@@ -60,3 +60,32 @@ div.warning {
     }
 
 }
+
+.gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.gallery figure {
+    margin: 0;
+    padding: 0;
+    display: block;
+    text-align: center;
+    margin: 0.2em;
+    max-width: 200px;
+}
+
+figure {
+    max-width: 80%;
+    margin: auto !important;
+}
+
+figure a {
+    display: block;
+}
+
+figure img {
+    border: 1px solid #aaa;
+    border-radius: 2px;
+}
