@@ -8,7 +8,7 @@ title: Log
 Attempts to correct the module layout result in disaster:
 
 * Found [XMPlayer 3.1.60 in English](https://archive.org/details/xmplayer-3.1.60) which successfully talked to the controller.
-* Fetched the config from the system and saved it ([controller](./configs/controller-20250102.rspc), [display](./configs/display-20250102.rspd), [receiver](./configs/receiver-20250102.rspr), [export](./configs/export-20250102.rsps)).
+* Fetched the config from the system and saved it ([controller](../configs/controller-20250102.rspc), [display](../configs/display-20250102.rspd), [receiver](../configs/receiver-20250102.rspr), [export](../configs/export-20250102.rsps)).
 * Accidentally hit the "preview" button. **This broke the receiver cards on the 12 modules which were connected to the sender at the time.** (Garbled output.)
     * Tried power-cycling, the issue persisted.
     * So much for "preview"
