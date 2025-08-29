@@ -4,7 +4,7 @@ weight: 1
 ---
 # LED Tile Giveaway
 
-This page lists available LED screen equipment which has been donated to our community by the manufacturer, and is being distributed for free by [Limehouse Labs](https://www.limehouselabs.org).
+This page lists available LED screen equipment which has been donated to our community by the manufacturer, and is being distributed by [Limehouse Labs](https://www.limehouselabs.org).
 
 Eligible recipients are individual makers, hackerspaces, non-profits, and other community organisations in the UK. This equipment is distributed on the understanding that it is not for resale or for-profit use.
 
@@ -18,5 +18,4 @@ Please note it may take a while for us to reply.
 
 ## Available items
 
-<!-- * ["v2" LED tiles](../tiles/led-tiles-v2) - approximately 200 available as of 2023-09-16 -->
-Nothing currently on offer. We might have some more ["v2" LED tiles](../tiles/led-tiles-v2) soon.
+* ["v2" LED tiles](../tiles/led-tiles-v2) - approximately 100 available, drop us an email, or [shipping is available](https://buy.stripe.com/00w9ATcda4Lj5B10eh48004)
