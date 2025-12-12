@@ -18,4 +18,4 @@ Please note it may take a while for us to reply.
 
 ## Available items
 
-* ["v2" LED tiles](../tiles/led-tiles-v2) - approximately 100 available, drop us an email, or [shipping is available](https://buy.stripe.com/00w9ATcda4Lj5B10eh48004)
+None at present.
