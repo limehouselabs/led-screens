@@ -17,7 +17,10 @@ title: Stella Prototype
 
 ## Details
 
-This is a one-off prototype made to evaluate a manufacturer for the digiLED "Stella" series of screens (if I remember correctly). It consists of 18 modules which can form a 480×240 px screen, or any other arrangement of 18 modules. Power input is powerCON (original).
+This is a one-off prototype made to evaluate a manufacturer for the digiLED "Stella" series of screens (if I remember correctly).
+This screen is fully working.
+
+It consists of 18 modules which can form a 480×240 px screen, or any other arrangement of 18 modules. Power input is powerCON (original).
 
 Total power consumption is in the region of 4.5 kW at full brightness so it can be powered from 2x 13A sockets.
 
